@@ -1,0 +1,247 @@
+* {
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../../../res/2.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 35%;
+    
+}
+
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 20%;
+    gap: 4% 2%;
+}
+
+#mainCard {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: transparent;
+    border-radius: .5rem;
+}
+
+#mainCard div:first-child {
+    background-color: transparent;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+
+p {
+    font-size: .8em;
+    opacity: .7;
+    font-weight: 100;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+fieldset {
+    border: none;
+}
+
+input[type="radio"]+label {
+    margin: 1rem 1.5rem;
+    font-weight: 400;
+    font-size: .8rem;
+    cursor: pointer;
+    display: block;
+    color: transparent ;
+    transition: 300ms;
+}
+
+input[type="radio"]+label:hover {
+    color: transparent ;
+}
+
+input[type="radio"]:checked+label {
+    color: transparent ;
+}
+
+.activity-container::before {
+    content: "";
+    background-repeat:no-repeat;
+    background-size: 3.2rem;
+    background-position: 95% -7.5%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
+    z-index: -1;
+    margin: -2rem 0 0 0;
+    border-radius: .5rem;
+    transition: 300ms;
+}
+.wrapper{
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+
+.activity-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    position: relative;
+    background-color: #5b5b60;
+    opacity: 100%;
+    border-radius: .5rem;
+    border-top-right-radius: 30px;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    height: calc(100% - 2rem);
+    margin-top: 2rem;
+    transition: 300ms;
+}
+
+
+#options{
+    width:265px;
+    height: 45px;
+    background-color: rgb(214, 241, 250);
+    opacity: 80%;
+    border-radius: 30px;
+    border-top-right-radius: 0.3rem;
+    border-top-left-radius: 0.3rem ;
+    visibility: hidden;
+    
+    
+}
+#options:hover{ 
+    visibility: visible;
+    transition-duration: .2s;
+    background-color: whitesmoke;
+}
+
+
+.activity-container:hover  {
+    cursor: pointer;
+    background-color: #33387a;
+
+    .activity-container img {
+        filter: saturate(100%);
+    }
+
+    .filler{
+        color: #33387a;
+        transition: 300ms;
+    }
+
+    #options{
+        background-color: transparent;
+    }
+}
+
+.activity-container:hover + #options {
+    cursor: pointer;
+    visibility: visible;
+}
+
+
+.activity-container img {
+    filter: saturate(.5);
+    justify-self: flex-end;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    main {
+        width: 90vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 10% 0;
+        gap: 2% 0;
+    }
+
+    
+
+    .activity-container {
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+
+  
+}
+
+
+#ob{
+    width: 35px;
+    background-color: transparent;
+}
+#db{
+    width: 35px;
+    background-color: transparent;
+}
+#rb{
+    width: 35px;
+    background-color: transparent;
+}
+#delb{
+    width: 35px;
+    background-color: transparent;
+}
+
+#opbtn{
+    height: 50px;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    
+    margin-right: 9px;
+    margin-left: 18px;
+}
+
+.menu-button{
+    position: absolute;
+    top : 5%;
+    width: 50px;
+}
+
+.filename{
+    position: absolute;
+    font-size: large;
+    top: 7%;
+    left :5% ;
+    width: 50px;
+}
+
+.filesize{
+    position: absolute;
+    bottom: 6%;
+    left :5% ;
+    width: 150px;
+
+}
+
+
+.filler{
+    color: #5b5b60;
+    visibility: hidden;
+    
+
+}

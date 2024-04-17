@@ -1,0 +1,24 @@
+from collections import Counter
+
+class Solution:
+    def oddString(self, words: List[str]) -> str:
+        
+        alpha = list(string.ascii_lowercase)
+        array_length = len(words)
+        element_length = len(words[0])
+        list0 = []
+        listA=[]
+        listB=[]
+        i=0
+        for wrd in words:
+            
+            listA.clear()
+            for letter in wrd:
+                for x in alpha:
+                    if (letter == x):
+                        value = alpha.index(x)
+                listA.append(value)
+                
+            list0.append(listA)
+        counter = Counter(list0)
+        min(counter, key=counter.get)

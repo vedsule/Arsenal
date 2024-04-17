@@ -1,0 +1,29 @@
+1>  admin and user database should not have same username ; fix it by adding another line of php in both
+    signup_user and signup_admin 
+    also empty username is not allowed ;
+
+
+2>  dont allow null usernames (since user_table cannot have no name)
+
+3>  let upload pic allow only jpg jpeg png gif files only
+    and upload files allow only documents pdf,txt,doc,ppt,xls;
+    also updATE the footer in allfiles span section
+
+4>  add more document extensions ; in upload.php 
+
+5> when password =! conf_password display error msg ( data not insertion is working well just add the alert)
+
+6> add more document extensions
+
+7>  missing feature => do not submitt fomr when accept terms and condn is not chechked
+
+8>  diplay.php =  display the files in center ;
+
+9>  if time permits do something about the profile pic also ;
+
+10> add a log out button which will session_end() and return to startup page ;
+
+11> download all downloadable files (and replace them in place of links) and remove the net dependancy
+
+13> add successfully deleted , succesfully renamed , succesfully downoaded
+msg on the all-files page using delete_success ...... ect variables
